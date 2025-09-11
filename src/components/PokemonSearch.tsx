@@ -22,11 +22,11 @@ export default function PokemonSearch({ onSearch }: Props) {
         placeholder="Search Pokemon by name..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border rounded px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="border rounded-3xl px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <button
         type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-blue-500 text-white px-4 py-2 rounded-3xl hover:bg-blue-700"
       >
         Search
       </button>
