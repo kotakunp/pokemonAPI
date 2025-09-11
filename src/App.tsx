@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 import PokemonDetail from "./components/PokemonDetail";
-import PokemonList from "./components/PokemonList";
+import PokemonSearch from "./components/PokemonSearch";
 
 function App() {
   const [selectedPokemon, setSelectedPokemon] = useState<string>("");
@@ -11,8 +11,8 @@ function App() {
       <h1 className="text-3xl font-bold text-center py-4">
         PokeAPI test (REST)
       </h1>
-      <PokemonList onSelect={setSelectedPokemon} />
-      <PokemonDetail name={selectedPokemon} />
+      <PokemonSearch onSearch={setSelectedPokemon} />
+      {selectedPokemon && <PokemonDetail name={selectedPokemon} />}
     </div>
   );
 }
